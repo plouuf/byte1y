@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "bytely",
+    "slug": "bytely",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyC6zPDTS591FL-s6doTHKRr4T7aebpF-nQ",
+          "authDomain": "bytely-15bb3.firebaseapp.com",
+          "projectId": "bytely-15bb3",
+          "storageBucket": "bytely-15bb3.appspot.com",
+          "messagingSenderId": "584760440015",
+          "appId": "1:584760440015:web:d268b8e3c34ad9964ff3ba",
+          "measurementId": "G-2ZLQKR5DRP"
+        }
+      }
+    }
+  }
+}
