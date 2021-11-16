@@ -31,10 +31,8 @@ const styles = StyleSheet.create({
     height: 70,
     borderWidth: 6,
     borderRadius: 100,
-    // borderColor: '#ff404090',
-    borderColor: 'rgba(255, 255, 255, 0.45)',
+    borderColor: '#ff404090',
     backgroundColor: '#ff4040',
-    // backgroundColor: 'white',
     alignSelf: 'center',
   },
 

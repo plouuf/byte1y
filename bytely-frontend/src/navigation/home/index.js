@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import CameraScreen from '../../screens/camera';
+import ProfileScreen from '../../screens/profile';
 
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -56,7 +57,7 @@ export default HomeScreen = () => {
       />
       <Tab.Screen
         name="Me"
-        component={EmptyScreen}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Feather name="user" size={24} color={color} />

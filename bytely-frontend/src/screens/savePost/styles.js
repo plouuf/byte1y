@@ -72,7 +72,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     marginLeft: 7
-  }
+  },
+
+  loadingSpinner: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
 
 })
 
