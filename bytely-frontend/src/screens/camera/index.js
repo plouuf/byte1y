@@ -5,6 +5,7 @@ import { Camera } from 'expo-camera';
 import { Audio } from 'expo-av';
 import * as ImagePicker from 'expo-image-picker';
 import * as MediaLibrary from 'expo-media-library';
+import * as VideoThumbnails from 'expo-video-thumbnails';
 import { useIsFocused } from '@react-navigation/core';
 import styles from './styles';
 
@@ -60,7 +61,8 @@ export default CameraScreen = () => {
         if (videoRecordPromise) {
           const data = await videoRecordPromise;
           const source = data.uri;
-          navigation.navigate('savePost', { source });
+          let thumbnail = await generateThumbnail(source)
+          navigation.navigate('savePost', { source, thumbnail });
         }
       } catch (error) {
         console.log(error);
@@ -82,7 +84,22 @@ export default CameraScreen = () => {
       quality: 1,
     });
     if (!result.cancelled) {
-      navigation.navigate('savePost', { source: result.uri });
+      let thumbnail = await generateThumbnail(result.uri)
+      navigation.navigate('savePost', { source: result.uri, thumbnail });
+    }
+  };
+
+  const generateThumbnail = async (source) => {
+    try {
+      const { uri } = await VideoThumbnails.getThumbnailAsync(
+        source,
+        {
+          time: 2000,
+        }
+      );
+      return uri;
+    } catch (e) {
+      console.warn(e);
     }
   };
 

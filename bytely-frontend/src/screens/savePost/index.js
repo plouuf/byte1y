@@ -23,7 +23,7 @@ export default SavePostScreen = (props) => {
 
   const handleSavePost = () => {
     setOnRequest(true);
-    dispatch(createPost(props.route.params.source, description)).then(() =>
+    dispatch(createPost(props.route.params.source, description, props.route.params.thumbnail)).then(() =>
       navigation
         .dispatch(StackActions.popToTop())
         .catch(() => setOnRequest(false))
