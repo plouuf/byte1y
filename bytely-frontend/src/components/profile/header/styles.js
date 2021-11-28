@@ -10,7 +10,9 @@ const styles = StyleSheet.create({
   },
 
   userText: {
-    padding: 20,
+    padding: 10,
+    paddingBottom: 20,
+    fontWeight: '600'
   },
 
   counterContainer: {
@@ -39,8 +41,22 @@ const styles = StyleSheet.create({
     color: 'lightgray',
     fontSize: 22,
     fontWeight: '100'
-  }
+  },
 
+  profilePictureContainer: {
+    backgroundColor: 'gray',
+    height: 100,
+    width: 100,
+    borderRadius: 50,
+    overflow: 'hidden',
+    borderWidth: 0.5,
+    borderColor: 'gray'
+  },
+
+  profilePicture: {
+    height: 100,
+    width: 100,
+  },
 
 })
 

@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import { saveMediaToStorage } from './utils';
+import { saveMediaToStorage } from '../../services/utils';
 require('firebase/firebase-auth');
 require('firebase/firestore');
 import uuid from 'uuid-random';
